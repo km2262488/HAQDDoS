@@ -48,7 +48,7 @@ async def main():
             await sleep(.0)
             
         event.set()
-        print("Attack started to %s" % target.human_repr())
+        print("BAIHU send packet to %s" % target.human_repr())
 
         while timer:
             pps, cps = 0, 0
